@@ -1,0 +1,35 @@
+{
+  "id": "fu-deck-ace-of-cards-dmarkhron",
+  "title": "FU — Ace of Cards | DM Arkhron",
+  "description": "Baralho persistente de 30 cartas para Ace of Cards no ProjectFU.",
+  "version": "0.2.5",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "projectfu",
+        "type": "system"
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "styles": [
+    "styles/main.css"
+  ],
+  "socket": true,
+  "authors": [
+    {
+      "name": "DM Arkhron"
+    }
+  ],
+  "url": "https://github.com/DMArkhron/ace-of-cards-yazi",
+  "manifest": "https://github.com/DMArkhron/ace-of-cards-yazi/releases/latest/download/module.json",
+  "download": "https://github.com/DMArkhron/ace-of-cards-yazi/releases/latest/download/fu-deck-ace-of-cards-dmarkhron.zip",
+  "readme": "README.md",
+  "license": "LICENSE.md"
+}

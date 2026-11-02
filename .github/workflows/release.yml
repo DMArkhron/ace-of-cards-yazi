@@ -1,0 +1,30 @@
+name: Publicar módulo
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Conferir versão e arquivos
+        run: |
+          node --check scripts/main.mjs
+          node --check scripts/rules.mjs
+          node --input-type=module -e "import fs from 'node:fs'; const m=JSON.parse(fs.readFileSync('module.json')); if ('v'+m.version!==process.env.GITHUB_REF_NAME) throw new Error('A tag deve ser v'+m.version);"
+          node --input-type=module -e "import {fresh,valid} from './scripts/rules.mjs'; if(!valid(fresh())) throw new Error('Baralho inválido');"
+      - name: Montar pacote para o Foundry
+        run: zip -r fu-deck-ace-of-cards-dmarkhron.zip module.json LICENSE.md README.md scripts styles
+      - name: Publicar release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            module.json
+            fu-deck-ace-of-cards-dmarkhron.zip
+          generate_release_notes: true
