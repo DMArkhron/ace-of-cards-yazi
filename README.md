@@ -27,7 +27,7 @@ Acompanhe mão, monte, descarte e Vanguarda em uma única janela. Selecione as c
 | --- | --- |
 | Foundry VTT | V13 |
 | Sistema de jogo | ProjectFU |
-| Ace of Cards | **0.2.5** |
+| Ace of Cards | **0.2.6** |
 | Idioma da interface | Português, com nomes de combinações em inglês |
 
 O módulo requer um mundo com **ProjectFU**. Um mestre deve estar conectado para processar as alterações do baralho feitas pelos jogadores.
@@ -39,15 +39,15 @@ A automação controla as cartas e publica os resultados no chat. **PV, PM, cond
 1. Na tela inicial do Foundry, abra **Módulos adicionais → Instalar módulo**.
 2. Cole o endereço abaixo no campo **URL do manifesto**.
 3. Clique em **Instalar** e aguarde o download.
-4. Entre no mundo ProjectFU e ative **FU — Ace of Cards | DM Arkhron** em **Gerenciar módulos**.
+4. Entre no mundo ProjectFU e ative **Fabula Ultima - Ace of Cards - DM Arkhron** em **Gerenciar módulos**.
 
 ```text
-https://github.com/DMArkhron/ace-of-cards-yazi/releases/latest/download/module.json
+https://raw.githubusercontent.com/DMArkhron/ace-of-cards-yazi/main/module.json
 ```
 
 ### Instalação manual
 
-1. Baixe o arquivo `fu-deck-ace-of-cards-dmarkhron.zip` na [Release mais recente](https://github.com/DMArkhron/ace-of-cards-yazi/releases/latest).
+1. Baixe o pacote [ace-of-cards-v0.2.6.zip](https://raw.githubusercontent.com/DMArkhron/ace-of-cards-yazi/main/dist/ace-of-cards-v0.2.6.zip).
 2. Com o Foundry fechado, extraia o conteúdo em `Data/modules/fu-deck-ace-of-cards-dmarkhron/`.
 3. Confira se o manifesto está em `Data/modules/fu-deck-ace-of-cards-dmarkhron/module.json`.
 4. Abra o Foundry e ative o módulo no mundo ProjectFU.
